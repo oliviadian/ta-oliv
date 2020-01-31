@@ -15,6 +15,14 @@
 //     return view('welcome');
 // });
 
+Auth::routes();
+Route::get('/Login', function () {
+    return view('login');
+});
+
+Route::post('/kirimdata', 'login@login');
+Route::get('/keluar', 'login@keluar');
+
 Route::get('/', function () {
     return view('landingpage');
 });
@@ -25,10 +33,6 @@ Route::get('/SeputarLaman', function () {
 
 Route::get('/Pencarian', function () {
     return view('pencarian');
-});
-
-Route::get('/Login', function () {
-    return view('login');
 });
 
 Route::get('/Daftar', function () {
@@ -50,3 +54,4 @@ Route::get('/PencarianNoun/login', function () {
 Route::get('/PencarianVerb/login', function () {
     return view('pencarian-verb');
 });
+

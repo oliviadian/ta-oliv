@@ -2,7 +2,8 @@
 @section('content')
 
   <div>
-        <form class="log-box">
+        <form class="log-box" >
+        {{csrf_field()}}
 
             <b> Login </b>
             <hr></hr>
@@ -14,7 +15,7 @@
                 </b>
             </div>
             <div>
-                <input  type="text" name="email"><br>
+                <input  type="text" name="email" is="email"><br>
             </div>
         </div>
 
@@ -25,7 +26,7 @@
                 </b>
             </div>
            <div>
-                <input  type="password" name="password"><br>
+                <input  type="password" name="password" id="password"><br>
            </div>
         </div>
 
